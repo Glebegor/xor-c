@@ -23,4 +23,4 @@ make build-run
 
 ## win1250
 Binary;Hex;Unicode;Windows-1250;Character
-We use ';' to separate cols in win1250.txt, so 0x38 default is ';' char.
+We use ';' to separate cols in win1250.txt, so 0x3B(';' char) is hardcoded.
