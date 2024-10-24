@@ -85,7 +85,10 @@ CMakeFiles/XOR-implementation.dir/main.c.o: /Users/glebegor/Programming/school/c
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/wait.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/glebegor/Programming/school/c-xor/include/hash_maps.h
+  /Users/glebegor/Programming/school/c-xor/include/decoding.h \
+  /Users/glebegor/Programming/school/c-xor/include/encoding.h \
+  /Users/glebegor/Programming/school/c-xor/include/hash_maps.h \
+  /Users/glebegor/Programming/school/c-xor/include/transform.h
 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/wait.h:
@@ -97,6 +100,8 @@ CMakeFiles/XOR-implementation.dir/main.c.o: /Users/glebegor/Programming/school/c
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_uintptr_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_uid_t.h:
+
+/Users/glebegor/Programming/school/c-xor/include/transform.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_u_int32_t.h:
 
@@ -194,6 +199,8 @@ CMakeFiles/XOR-implementation.dir/main.c.o: /Users/glebegor/Programming/school/c
 
 /Users/glebegor/Programming/school/c-xor/main.c:
 
+/Users/glebegor/Programming/school/c-xor/include/decoding.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/arm/signal.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_pthread/_pthread_types.h:
@@ -219,6 +226,8 @@ CMakeFiles/XOR-implementation.dir/main.c.o: /Users/glebegor/Programming/school/c
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/mach/arm/_structs.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/_types/_uint32_t.h:
+
+/Users/glebegor/Programming/school/c-xor/include/encoding.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/appleapiopts.h:
 
