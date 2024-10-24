@@ -8,3 +8,4 @@ run:
 build-run:
 	chmod +x ./*.sh
 	./build.sh
+	./run.sh

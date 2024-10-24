@@ -3,6 +3,7 @@
 Script to decrypt and encrypt by xor.
 
 ## Makefile
+### Mac build
 to build:
 
 ```
