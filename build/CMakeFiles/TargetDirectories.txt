@@ -1,0 +1,3 @@
+/Users/glebegor/Programming/school/c-xor/build/CMakeFiles/XOR-implementation.dir
+/Users/glebegor/Programming/school/c-xor/build/CMakeFiles/edit_cache.dir
+/Users/glebegor/Programming/school/c-xor/build/CMakeFiles/rebuild_cache.dir
