@@ -21,10 +21,12 @@ int get_choice() {
 }
 
 int main() {
-    char secret_str[16] = "BrejchaDCZHoodik"; 
+    char *secret_str; 
     char input_str[MAX_INPUT_SIZE];  
     int choice;
-
+    
+    secret_str = (char *)malloc(17 * sizeof(char));
+    strcpy(secret_str, "BrejchadCZHoodink");
     choice = get_choice();
 
     if (choice == 1) {
@@ -34,11 +36,16 @@ int main() {
             char* input_binary = string_to_binary(input_str);
             char* input_hex = binary_to_hex(input_binary);
             
-            printf("####################\n");
-            printf("Input binary: %s\n", input_binary);
-            printf("Input Hex: %s\n", input_hex);
-            printf("####################\n");
+            char* secret_binary = string_to_binary(secret_str);
 
+            printf("####################\n");
+            printf("# Secret String: %s\n", secret_str);
+            printf("# Secret Binary: %s\n", secret_binary);
+            printf("# --------------------\n");
+            printf("# Input Binary: %s\n", input_binary);
+            printf("# Input Hex: %s\n", input_hex);
+            printf("# --------------------\n");
+            printf("####################\n");
         }
     } else if (choice == 2) {
         printf("Enter the string to decode: ");
