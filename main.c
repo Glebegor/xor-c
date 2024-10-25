@@ -38,13 +38,20 @@ int main() {
             
             char* secret_binary = string_to_binary(secret_str);
 
+            char* res_binary = xor_binary(input_binary, secret_binary);
+
+
+
             printf("####################\n");
             printf("# Secret String: %s\n", secret_str);
             printf("# Secret Binary: %s\n", secret_binary);
             printf("# --------------------\n");
-            printf("# Input Binary: %s\n", input_binary);
-            printf("# Input Hex: %s\n", input_hex);
+            printf("# Input  Binary: %s\n", input_binary);
+            printf("# Input  Hex:    %s\n", input_hex);
             printf("# --------------------\n");
+            printf("# Result Binary: %s\n", res_binary);
+            // printf("# Result Hex: %s\n", res_hex);
+            // printf("# Result Win: %s\n", res_win);
             printf("####################\n");
         }
     } else if (choice == 2) {
