@@ -43,3 +43,54 @@ char* binary_to_hex(char input_str[]) {
 
     return hex_str;
 }
+
+void change_last_unsigned_element(char win_res[], char input_str[], int i) {
+    printf("add /x\n");
+    int free_index = 0;
+    while (win_res[free_index] != '\0' && free_index < 10000) {
+        free_index++;
+    }
+    win_res[free_index] = '/';
+    win_res[free_index + 1] = 'x';
+    win_res[free_index + 2] = input_str[i];
+    win_res[free_index + 3] = input_str[i+1];
+}
+
+void change_last_element(char win_res[], char input_str[], int i) {
+    printf("add char from win1250\n");
+    int free_index = 0;
+    while (win_res[free_index] != '\0' && free_index < 10000) {
+        free_index++;
+    }
+    win_res[free_index] = input_str[i];
+    win_res[free_index+1] = input_str[i+1];
+}
+
+
+char* hex_to_win(char input_str[]) {
+    char win_res[10000];
+
+    for (int i = 0; i < strlen(input_str)-1; i+=2) {
+        if(input_str[i] <= '1') {            
+            change_last_unsigned_element(win_res, input_str, &i);
+        } else if (input_str[i] == '2' && input_str[i+1] == '0') {
+            change_last_unsigned_element(win_res, input_str, &i);
+        } else if ((input_str[i] == '7' && input_str[i+1] == 'F') \
+            || (input_str[i] == '8' && input_str[i+1] == '1') \
+            || (input_str[i] == '8' && input_str[i+1] == '3') \
+            || (input_str[i] == '8' && input_str[i+1] == '8') \
+            || (input_str[i] == '9' && input_str[i+1] == '8') \
+            || (input_str[i] == '9' && input_str[i+1] == '0') \
+            || (input_str[i] == 'A' && input_str[i+1] == '0') \
+            || (input_str[i] == 'A' && input_str[i+1] == 'D')) {
+            // add /x
+            change_last_unsigned_element(win_res, input_str, &i);
+        } else {
+            // add char from win1250
+            change_last_element(win_res, input_str, &i); // change on win1250
+        }
+    }
+
+    return win_res;
+
+}

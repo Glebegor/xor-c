@@ -39,6 +39,8 @@ int main() {
             char* secret_binary = string_to_binary(secret_str);
 
             char* res_binary = xor_binary(input_binary, secret_binary);
+            char* res_hex = binary_to_hex(res_binary);
+            char* res_win = hex_to_win(res_hex);
 
 
 
@@ -50,8 +52,8 @@ int main() {
             printf("# Input  Hex:    %s\n", input_hex);
             printf("# --------------------\n");
             printf("# Result Binary: %s\n", res_binary);
-            // printf("# Result Hex: %s\n", res_hex);
-            // printf("# Result Win: %s\n", res_win);
+            printf("# Result Hex:    %s\n", res_hex);
+            printf("# Result Win:    %s\n", res_win);
             printf("####################\n");
         }
     } else if (choice == 2) {
