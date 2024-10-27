@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define TABLE_SIZE 40
+#define TABLE_SIZE 256
 
 void file_to_table() {
     char *filename = "win1250.txt";
@@ -40,11 +40,16 @@ void file_to_table() {
         printf("Windows-1250: %s\n", windows1250);
 
         // Read the character field (including empty)
-        if (fscanf(file, "%1s\n", character) == 1) {
-            printf("Character: %s\n", character);
-        } else {
-            printf("Character: (empty)\n");  // Handle empty character field
+        if (fscanf(file, "%[^\n]\n", character) == 1) {
+
+            if(character[0] == '#' && (hex_win[2] != '2' || hex_win[3] != '3')) {
+                character[0] = '\0';
+                printf("Character: (system charset)\n");  // Handle empty character field
+            } else {
+                printf("Character: %s\n", character);
+            }
         }
+
 
         index++;
     }
