@@ -86,4 +86,5 @@ CMakeFiles/XOR-implementation.dir/main.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/secure/_string.h \
   /Users/glebegor/Programming/school/c-xor/include/decoding.h \
   /Users/glebegor/Programming/school/c-xor/include/encoding.h \
-  /Users/glebegor/Programming/school/c-xor/include/transform.h
+  /Users/glebegor/Programming/school/c-xor/include/transform.h \
+  /Users/glebegor/Programming/school/c-xor/include/filetotable.h

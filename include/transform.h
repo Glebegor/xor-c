@@ -6,7 +6,7 @@
 char* string_to_binary(char input_str[]) {
     char* binary_str = (char*)malloc(8 * strlen(input_str) + 1);
     if (binary_str == NULL) {
-        printf("Memory уккщк.\n");
+        printf("Memory error.\n");
         exit(1);
     }
 
@@ -24,7 +24,7 @@ char* string_to_binary(char input_str[]) {
 char* binary_to_hex(char input_str[]) {
     char* hex_str = (char*)malloc(2 * strlen(input_str) + 1);
     if (hex_str == NULL) {
-        printf("Memory уккщк.\n");
+        printf("Memory error.\n");
         exit(1);
     }
 
@@ -45,7 +45,6 @@ char* binary_to_hex(char input_str[]) {
 }
 
 void change_last_unsigned_element(char win_res[], char input_str[], int i) {
-    printf("add /x\n");
     int free_index = 0;
     while (win_res[free_index] != '\0' && free_index < 10000) {
         free_index++;
@@ -57,7 +56,6 @@ void change_last_unsigned_element(char win_res[], char input_str[], int i) {
 }
 
 void change_last_element(char win_res[], char input_str[], int i) {
-    printf("add char from win1250\n");
     int free_index = 0;
     while (win_res[free_index] != '\0' && free_index < 10000) {
         free_index++;
@@ -69,8 +67,11 @@ void change_last_element(char win_res[], char input_str[], int i) {
 
 char* hex_to_win(char input_str[]) {
     char win_res[10000];
+    memset(win_res, '\0', sizeof(win_res));
 
     for (int i = 0; i < strlen(input_str)-1; i+=2) {
+        
+        // Check if char isn't a system command
         if(input_str[i] <= '1') {            
             change_last_unsigned_element(win_res, input_str, &i);
         } else if (input_str[i] == '2' && input_str[i+1] == '0') {
@@ -89,6 +90,7 @@ char* hex_to_win(char input_str[]) {
             // add char from win1250
             change_last_element(win_res, input_str, &i); // change on win1250
         }
+
     }
 
     return win_res;

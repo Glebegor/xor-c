@@ -87,6 +87,7 @@ CMakeFiles/XOR-implementation.dir/main.c.o: /Users/glebegor/Programming/school/c
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include/stdint.h \
   /Users/glebegor/Programming/school/c-xor/include/decoding.h \
   /Users/glebegor/Programming/school/c-xor/include/encoding.h \
+  /Users/glebegor/Programming/school/c-xor/include/filetotable.h \
   /Users/glebegor/Programming/school/c-xor/include/hash_maps.h \
   /Users/glebegor/Programming/school/c-xor/include/transform.h
 
@@ -120,6 +121,8 @@ CMakeFiles/XOR-implementation.dir/main.c.o: /Users/glebegor/Programming/school/c
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_sigset_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_null.h:
+
+/Users/glebegor/Programming/school/c-xor/include/filetotable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_mode_t.h:
 

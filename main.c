@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <hash_maps.h>
+#include <filetotable.h>
+
 
 #define MAX_INPUT_SIZE 10000  // max input
 
@@ -27,22 +30,27 @@ int main() {
     
     secret_str = (char *)malloc(17 * sizeof(char));
     strcpy(secret_str, "BrejchadCZHoodink");
+    // Text to encode: "Tohle by jsi neměl číst, jak se ti to vůbec povedlo?"
     choice = get_choice();
+
+    file_to_table();
 
     if (choice == 1) {
         printf("Enter the string to encode: ");
         if (fgets(input_str, MAX_INPUT_SIZE, stdin) != NULL) {
+            
+            // Input data
             input_str[strcspn(input_str, "\n")] = '\0';
             char* input_binary = string_to_binary(input_str);
             char* input_hex = binary_to_hex(input_binary);
             
+            // Secret Data
             char* secret_binary = string_to_binary(secret_str);
-
+ 
+            // Result data
             char* res_binary = xor_binary(input_binary, secret_binary);
             char* res_hex = binary_to_hex(res_binary);
             char* res_win = hex_to_win(res_hex);
-
-
 
             printf("####################\n");
             printf("# Secret String: %s\n", secret_str);
@@ -68,3 +76,5 @@ int main() {
 
     return 0;
 }
+
+
