@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define TABLE_SIZE 35
+#define TABLE_SIZE 40
 
 void file_to_table() {
     char *filename = "win1250.txt";
