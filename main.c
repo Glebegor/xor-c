@@ -1,11 +1,8 @@
-#include <hash_maps.h>
-#include <decoding.h>
-#include <encoding.h>
+#include <coding.h>
 #include <transform.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <hash_maps.h>
 #include <filetotable.h>
 
 
@@ -33,28 +30,30 @@ int main() {
     // Text to encode: "Tohle by jsi neměl číst, jak se ti to vůbec povedlo?"
     choice = get_choice();
 
-    file_to_table();
+    char chars_table = file_to_table();
 
     if (choice == 1) {
         printf("Enter the string to encode: ");
         if (fgets(input_str, MAX_INPUT_SIZE, stdin) != NULL) {
-            
             // Input data
             input_str[strcspn(input_str, "\n")] = '\0';
-            char* input_binary = string_to_binary(input_str);
+            char* input_binary = string_to_binary(chars_table, input_str);
             char* input_hex = binary_to_hex(input_binary);
             
+            
             // Secret Data
-            char* secret_binary = string_to_binary(secret_str);
- 
+            char* secret_binary = string_to_binary(chars_table, secret_str);
+            char* secret_hex = binary_to_hex(secret_binary);
+
             // Result data
             char* res_binary = xor_binary(input_binary, secret_binary);
             char* res_hex = binary_to_hex(res_binary);
-            char* res_win = hex_to_win(res_hex);
+            char* res_win = hex_to_win(chars_table, res_hex);
 
             printf("####################\n");
             printf("# Secret String: %s\n", secret_str);
             printf("# Secret Binary: %s\n", secret_binary);
+            printf("# Secret Hex:    %s\n", secret_hex);
             printf("# --------------------\n");
             printf("# Input  Binary: %s\n", input_binary);
             printf("# Input  Hex:    %s\n", input_hex);

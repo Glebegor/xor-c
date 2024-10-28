@@ -1,6 +1,6 @@
 CMakeFiles/XOR-implementation.dir/main.c.o: \
   /Users/glebegor/Programming/school/c-xor/main.c \
-  /Users/glebegor/Programming/school/c-xor/include/hash_maps.h \
+  /Users/glebegor/Programming/school/c-xor/include/coding.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/_stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/cdefs.h \
@@ -84,7 +84,5 @@ CMakeFiles/XOR-implementation.dir/main.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/secure/_strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/secure/_string.h \
-  /Users/glebegor/Programming/school/c-xor/include/decoding.h \
-  /Users/glebegor/Programming/school/c-xor/include/encoding.h \
   /Users/glebegor/Programming/school/c-xor/include/transform.h \
   /Users/glebegor/Programming/school/c-xor/include/filetotable.h
