@@ -30,7 +30,7 @@ int main() {
     // Text to encode: "Tohle by jsi neměl číst, jak se ti to vůbec povedlo?"
     choice = get_choice();
 
-    char chars_table = file_to_table();
+    char* chars_table = file_to_table();
 
     if (choice == 1) {
         printf("Enter the string to encode: ");

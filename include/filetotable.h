@@ -2,6 +2,8 @@
 
 #define TABLE_SIZE 256
 
+#ifndef FILETOTABLE_H
+#define FILETOTABLE_H
 
 typedef struct {
     char binary[9];
@@ -80,3 +82,4 @@ table_element *file_to_table() {
     printf("Table got successfully.\n");
     return table;
 }
+#endif
