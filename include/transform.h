@@ -2,24 +2,32 @@
 #include <stdlib.h>
 #include <string.h>
 #include <filetotable.h>
-
 char* string_to_binary(table_element char_table[], char input_str[]) {
+    int length = strlen(input_str);
+    char* binary_str = (char*)malloc(8 * length + 1);
     
-    char* binary_str = (char*)malloc(8 * strlen(input_str) + 1);
     if (binary_str == NULL) {
         printf("Memory error.\n");
         exit(1);
     }
+    
+    binary_str[0] = '\0';  // Initialize to an empty string.
 
-    for(int i=0;i<strlen(input_str);i++) {
-        // printf("%c\n", input_str[i]);
-        for(int j=0;j<256;j++) {
-            if(input_str[i] == char_table[j].character[0]) {
-                // printf("%s\n", char_table[j].binary);
+    // Loop through each character in input_str
+    for (int i = 0; i < length; i++) {
+        int found = 0;
+        for (int j = 0; j < 256; j++) {
+            if (input_str[i] == char_table[j].character[0]) {
                 strcat(binary_str, char_table[j].binary);
+                found = 1;
+                break;
             }
         }
+        if (!found) {
+            printf("Character '%c' not found in table.\n", input_str[i]);
+        }
     }
+    
     return binary_str;
 }
 

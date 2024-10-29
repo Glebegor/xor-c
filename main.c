@@ -29,7 +29,7 @@ int main() {
     strcpy(secret_str, "BrejchadCZHoodink");
     // Text to encode: "Tohle by jsi neměl číst, jak se ti to vůbec povedlo?"
     choice = get_choice();
-
+    printf("\u015A");
     char* chars_table = file_to_table();
 
     if (choice == 1) {
