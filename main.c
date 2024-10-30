@@ -4,9 +4,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <filetotable.h>
+// localisation
+#include <wchar.h>
+#include <locale.h>
 
-
-#define MAX_INPUT_SIZE 10000  // max input
+#define MAX_INPUT_SIZE 100000  // max input
 
 int get_choice() {
     int choice;
@@ -21,6 +23,7 @@ int get_choice() {
 }
 
 int main() {
+    setlocale(LC_ALL, "Polish_Poland.1250");
     char *secret_str; 
     char input_str[MAX_INPUT_SIZE];  
     int choice;
@@ -29,8 +32,8 @@ int main() {
     strcpy(secret_str, "BrejchadCZHoodink");
     // Text to encode: "Tohle by jsi neměl číst, jak se ti to vůbec povedlo?"
     choice = get_choice();
-    printf("\u015A");
-    char* chars_table = file_to_table();
+
+    table_element* chars_table = file_to_table();
 
     if (choice == 1) {
         printf("Enter the string to encode: ");

@@ -51,7 +51,7 @@ table_element *file_to_table() {
     }
 
     int index = 0;
-    char binary[9], hex_win[5], unicode[8], windows1250[3], character[2] = {0};
+    char binary[9], hex_win[5], unicode[8], windows1250[3], character[2] = {0, 0};
 
     // Skip the header line
     if (fscanf(file, "%*[^\n]\n") == EOF) {
@@ -63,7 +63,7 @@ table_element *file_to_table() {
 
     // Read each line until the end of file or until maximum entries reached
     while (index < TABLE_SIZE &&
-           fscanf(file, "%8[^;];%4[^;];%7[^;];%2[^;];", binary, hex_win, unicode, windows1250) == 4) {
+           fscanf(file, "%8[^;];%4[^;];%5[^;];%2[^;];", binary, hex_win, unicode, windows1250) == 4) {
         if (fscanf(file, "%[^\n]\n", character) == 1) {
             if(character[0] == '#' && (hex_win[2] != '2' || hex_win[3] != '3')) {
                 character[0] = '\0';
@@ -71,6 +71,8 @@ table_element *file_to_table() {
         }
 
         add_element(table, index, binary, hex_win, unicode, windows1250, character);
+        // print_table_element(table[index]); // uncomment for debugging
+        
         index++;
     }
 
